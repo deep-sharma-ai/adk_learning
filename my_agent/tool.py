@@ -5,8 +5,10 @@ def calculate_uplift(test_rate: float, control_rate: float) -> float:
     return round(((test_rate - control_rate) / control_rate) * 100, 2)
 
 def calculate_ctr(clicks: int, impressions: int) -> float:
-    """
-    Use this tool, when user asks for CTR (Click Through Rate) calculation.
+    """Calculate Click Through Rate.
+Use when user asks for CTR,
+engagement rate,
+or click performance.
     """
     return round((clicks / impressions) * 100, 2)
 
