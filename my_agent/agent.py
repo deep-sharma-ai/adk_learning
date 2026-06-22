@@ -3,7 +3,12 @@ from .tool import (
     calculate_uplift,
     calculate_ctr,
     calculate_conversion_rate,
-    calculate_roi
+    calculate_roi,
+    store_revenue,
+    store_cost,
+    show_metrics,
+    calculate_roi_from_state,
+    debug_state
 )
 
 root_agent = Agent(
@@ -23,9 +28,25 @@ After obtaining tool results:
 3. Provide business recommendations.
 
 Always be business oriented.
+If user wants to save revenue,
+use store_revenue.
+
+If user wants to save cost,
+use store_cost.
+
+If user asks for stored metrics,
+use show_metrics.
+
+If user asks to calculate ROI using stored values,
+use calculate_roi_from_state.
 """,
     tools=[calculate_uplift,
     calculate_ctr,
     calculate_conversion_rate,
-    calculate_roi]
+    calculate_roi,
+    store_revenue,
+    store_cost,
+    show_metrics,
+    calculate_roi_from_state,
+    debug_state]
 )
